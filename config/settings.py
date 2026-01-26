@@ -133,13 +133,3 @@ STATIC_URL = 'static/'
 MEDIA_URL = "/media/"
 MEDIA_ROOT = BASE_DIR / "media"
 
-EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
-
-EMAIL_HOST = "kalakutas.serveriai.lt"
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-
-EMAIL_HOST_USER = "saskaitos@mevika.lt"
-EMAIL_HOST_PASSWORD = "M4443hUU49Yar89F"
-
-DEFAULT_FROM_EMAIL = "Sąskaitos < saskaitos@mevika.lt>"

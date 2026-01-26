@@ -212,7 +212,7 @@ class Command(BaseCommand):
 
             InvoiceLine.objects.create(
                 invoice=invoice,
-                description=f"Abonementas: {sub.title}",
+                description=f"{sub.title}",
                 quantity=Decimal("1.00"),
                 unit_price=sub_fee,
                 total=sub_fee,

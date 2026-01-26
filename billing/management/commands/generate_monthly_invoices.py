@@ -121,6 +121,7 @@ class Command(BaseCommand):
             ),
             from_email=getattr(settings, "DEFAULT_FROM_EMAIL", "no-reply@localhost"),
             to=recipients,
+            bcc=["vyga@infsis.lt"],   # 👈 čia įrašyk savo adresą
         )
 
         if getattr(invoice, "pdf", None) is not None and invoice.pdf:

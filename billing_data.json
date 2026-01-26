@@ -1,0 +1,82 @@
+[
+{
+  "model": "billing.client",
+  "pk": 1,
+  "fields": {
+    "name": "Klientas 1",
+    "company_code": "123456789",
+    "vat_code": "",
+    "email": "vyga@kkkkdao.lt",
+    "address": "Adresas kliento",
+    "active": true
+  }
+},
+{
+  "model": "billing.client",
+  "pk": 2,
+  "fields": {
+    "name": "Klientas2",
+    "company_code": "987654321",
+    "vat_code": "LT1234567890",
+    "email": "vyga@kkkkdao.lt",
+    "address": "Adresas Klinetas2",
+    "active": true
+  }
+},
+{
+  "model": "billing.subscription",
+  "pk": 1,
+  "fields": {
+    "client": 1,
+    "monthly_fee": "35.00",
+    "hosting_yearly_fee": "360.00",
+    "hosting_valid_until": "2026-02-01",
+    "active": true
+  }
+},
+{
+  "model": "billing.subscription",
+  "pk": 2,
+  "fields": {
+    "client": 2,
+    "monthly_fee": "65.00",
+    "hosting_yearly_fee": "360.00",
+    "hosting_valid_until": "2026-01-01",
+    "active": true
+  }
+},
+{
+  "model": "billing.clientemail",
+  "pk": 1,
+  "fields": {
+    "client": 1,
+    "email": "vyga@informacines-sistemos.lt",
+    "email_type": "accounting",
+    "active": true
+  }
+},
+{
+  "model": "billing.worklog",
+  "pk": 1,
+  "fields": {
+    "client": 1,
+    "date": "2026-01-25",
+    "description": "Programavimo darbai",
+    "quantity": "3.00",
+    "unit_price": "35.00",
+    "billed": false
+  }
+},
+{
+  "model": "billing.worklog",
+  "pk": 2,
+  "fields": {
+    "client": 1,
+    "date": "2026-01-18",
+    "description": "IS ?diegimas serveryje",
+    "quantity": "1.00",
+    "unit_price": "600.00",
+    "billed": false
+  }
+}
+]

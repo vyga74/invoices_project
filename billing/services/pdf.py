@@ -1,4 +1,8 @@
 import os
+from reportlab.pdfbase import pdfmetrics
+from reportlab.pdfbase.ttfonts import TTFont
+from django.conf import settings
+from pathlib import Path
 from io import BytesIO
 from decimal import Decimal
 
@@ -7,7 +11,28 @@ from django.utils import timezone
 
 from reportlab.lib.pagesizes import A4
 from reportlab.pdfgen import canvas
+from reportlab.lib.utils import ImageReader
 
+FONT_PATH = Path(settings.BASE_DIR) / "billing" / "assets" / "fonts" / "DejaVuSans.ttf"
+FONT_PATH2 = Path(settings.BASE_DIR) / "billing" / "assets" / "fonts" / "DejaVuSans-Bold.ttf"
+
+LOGO_PATH = Path(settings.BASE_DIR) / "billing" / "assets" / "logo.png"
+
+pdfmetrics.registerFont(TTFont("DejaVu", FONT_PATH))
+pdfmetrics.registerFont(TTFont("DejaVu-Bold", FONT_PATH2))
+
+def amount_to_words_lt(amount):
+    from decimal import Decimal
+    try:
+        from num2words import num2words
+        amt = Decimal(str(amount)).quantize(Decimal("0.01"))
+        euros = int(amt)
+        cents = int((amt - euros) * 100)
+        words = num2words(euros, lang="lt")
+        return f"{words} eur {cents:02d} ct"
+    except Exception:
+        amt = Decimal(str(amount)).quantize(Decimal("0.01"))
+        return f"{amt:.2f} EUR"
 
 def generate_invoice_pdf(invoice) -> ContentFile:
     """
@@ -21,11 +46,30 @@ def generate_invoice_pdf(invoice) -> ContentFile:
     y = height - 50
 
     # Header
-    c.setFont("Helvetica-Bold", 16)
-    c.drawString(x, y, "SĄSKAITA-FAKTŪRA")
+    # Logo (top-right). Put your logo file at: billing/assets/logo.png
+    # If the file doesn't exist, PDF will still be generated without a logo.
+    try:
+        if LOGO_PATH.exists():
+            img = ImageReader(str(LOGO_PATH))
+            logo_w = 110
+            logo_h = 40
+            c.drawImage(
+                img,
+                width - 40 - logo_w,
+                height - 50 - logo_h + 10,
+                width=logo_w,
+                height=logo_h,
+                preserveAspectRatio=True,
+                mask='auto',
+            )
+    except Exception:
+        pass
+
+    c.setFont("DejaVu-Bold", 16)
+    c.drawString(x, y, "PVM SĄSKAITA-FAKTŪRA")
     y -= 25
 
-    c.setFont("Helvetica", 10)
+    c.setFont("DejaVu", 10)
     c.drawString(x, y, f"Nr: {invoice.number}")
     y -= 15
     c.drawString(x, y, f"Išrašymo data: {invoice.issued_date}")
@@ -33,27 +77,56 @@ def generate_invoice_pdf(invoice) -> ContentFile:
     c.drawString(x, y, f"Apmokėti iki: {invoice.due_date}")
     y -= 25
 
-    # Client
-    c.setFont("Helvetica-Bold", 11)
-    c.drawString(x, y, "Pirkėjas:")
-    y -= 14
-    c.setFont("Helvetica", 10)
-    c.drawString(x, y, invoice.client.name)
-    y -= 14
+    # Seller + Client (side-by-side)
+    left_x = x
+    right_x = x + 280
+    block_top_y = y
+
+    # Titles
+    c.setFont("DejaVu-Bold", 11)
+    c.drawString(left_x, block_top_y, "Tiekėjas:")
+    c.drawString(right_x, block_top_y, "Pirkėjas:")
+
+    # Seller lines (left column)
+    seller_y = block_top_y - 14
+    c.setFont("DejaVu", 10)
+    seller_lines = [
+        "MEVIKA UAB",
+        "Įmonės kodas: 302666445",
+        "PVM kodas: LT100009187014",
+        "A/S: LT114010044200904314",
+        "Adresas: Darbo g. 18, Kuršėnai",
+    ]
+    for s in seller_lines:
+        c.drawString(left_x, seller_y, s)
+        seller_y -= 14
+
+    # Client lines (right column)
+    client_y = block_top_y - 14
+    c.setFont("DejaVu", 10)
+    client_lines = [invoice.client.name]
+
     if getattr(invoice.client, "company_code", ""):
-        c.drawString(x, y, f"Įmonės kodas: {invoice.client.company_code}")
-        y -= 14
+        client_lines.append(f"Įmonės kodas: {invoice.client.company_code}")
+
     if getattr(invoice.client, "vat_code", ""):
-        c.drawString(x, y, f"PVM kodas: {invoice.client.vat_code}")
-        y -= 14
+        client_lines.append(f"PVM kodas: {invoice.client.vat_code}")
+
     if getattr(invoice.client, "address", ""):
         # trumpai, kad neišvažiuotų į šoną
         addr = (invoice.client.address or "").replace("\n", ", ")
-        c.drawString(x, y, f"Adresas: {addr[:120]}")
-        y -= 20
+        client_lines.append(f"Adresas: {addr[:120]}")
+
+    for s in client_lines:
+        c.drawString(right_x, client_y, s)
+        client_y -= 14
+
+    # Move y to below the taller of the two columns
+    y = min(seller_y, client_y) - 10
+
 
     # Table header
-    c.setFont("Helvetica-Bold", 10)
+    c.setFont("DejaVu-Bold", 10)
     c.drawString(x, y, "Aprašymas")
     c.drawString(x + 330, y, "Kiekis")
     c.drawString(x + 400, y, "Kaina")
@@ -63,36 +136,86 @@ def generate_invoice_pdf(invoice) -> ContentFile:
     y -= 15
 
     # Lines
-    c.setFont("Helvetica", 10)
-    total = Decimal("0.00")
+    c.setFont("DejaVu", 10)
 
-    for line in invoice.lines.all():
-        desc = line.description
+    # 1) Lentelėje rodome tik realias paslaugų/prekių eilutes (ne PVM eilutę, jei ji buvo sukurta kaip InvoiceLine)
+    lines_qs = invoice.lines.all()
+    table_total = Decimal("0.00")
+
+    for line in lines_qs:
+        # Jei kažkur anksčiau PVM buvo sukurtas kaip atskira eilutė – jos nerodom lentelėje
+        desc_raw = (line.description or "").strip()
+        if desc_raw.lower().startswith("pvm") or desc_raw.lower() in {"vat", "vat 21%", "pvm 21%"}:
+            continue
+
+        desc = desc_raw
         if len(desc) > 55:
             desc = desc[:52] + "..."
 
         c.drawString(x, y, desc)
         c.drawRightString(x + 370, y, f"{line.quantity}")
-        c.drawRightString(x + 450, y, f"{line.unit_price:.2f}")
-        c.drawRightString(x + 530, y, f"{line.total:.2f}")
-        total += Decimal(str(line.total))
+        c.drawRightString(x + 450, y, f"{Decimal(str(line.unit_price)).quantize(Decimal('0.01')):.2f}")
+        c.drawRightString(x + 530, y, f"{Decimal(str(line.total)).quantize(Decimal('0.01')):.2f}")
+
+        table_total += Decimal(str(line.total or 0))
 
         y -= 14
-        if y < 80:
+        if y < 120:
             c.showPage()
             y = height - 60
-            c.setFont("Helvetica", 10)
+            c.setFont("DejaVu", 10)
 
-    # Total
+    # 2) Skaičiuojam sumas (be PVM, PVM, su PVM)
+    # Jei modelyje jau turi laukus (invoice.net_amount / invoice.vat_amount / invoice.vat_rate / invoice.total_amount) – naudojam juos.
+    net_amount = getattr(invoice, "net_amount", None)
+    vat_amount = getattr(invoice, "vat_amount", None)
+    vat_rate = getattr(invoice, "vat_rate", None)
+    gross_amount = getattr(invoice, "total_amount", None)
+
+    if net_amount is None:
+        net_amount = table_total
+    else:
+        net_amount = Decimal(str(net_amount))
+
+    if vat_rate is None:
+        vat_rate = Decimal("0.21")
+    else:
+        vat_rate = Decimal(str(vat_rate))
+
+    if vat_amount is None:
+        vat_amount = (net_amount * vat_rate).quantize(Decimal("0.01"))
+    else:
+        vat_amount = Decimal(str(vat_amount))
+
+    if gross_amount is None:
+        gross_amount = (net_amount + vat_amount).quantize(Decimal("0.01"))
+    else:
+        gross_amount = Decimal(str(gross_amount))
+
+    # 3) Totals blokas apačioje
     y -= 10
     c.line(x, y, width - 40, y)
-    y -= 20
-    c.setFont("Helvetica-Bold", 12)
-    c.drawRightString(width - 40, y, f"Iš viso: {total:.2f} €")
+    y -= 18
+
+    c.setFont("DejaVu-Bold", 10)
+    c.drawRightString(width - 40, y, f"Suma be PVM: {net_amount:.2f} €")
+    y -= 14
+
+    c.setFont("DejaVu", 10)
+    c.drawRightString(width - 40, y, f"PVM ({(vat_rate * Decimal('100')).quantize(Decimal('0')):.0f}%): {vat_amount:.2f} €")
+    y -= 16
+
+    c.setFont("DejaVu-Bold", 12)
+    c.drawRightString(width - 40, y, f"Iš viso su PVM: {gross_amount:.2f} €")
+
+    # 4) Suma žodžiais
+    y -= 22
+    c.setFont("DejaVu", 10)
+    c.drawString(x, y, f"Suma žodžiais: {amount_to_words_lt(gross_amount)}")
 
     # Footer
     y -= 35
-    c.setFont("Helvetica", 9)
+    c.setFont("DejaVu", 9)
     c.drawString(x, 40, f"Sugeneruota: {timezone.now().strftime('%Y-%m-%d %H:%M')}")
 
     c.showPage()

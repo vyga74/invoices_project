@@ -112,24 +112,54 @@ class Command(BaseCommand):
             pdf_file = generate_invoice_pdf(invoice)
             invoice.pdf.save(pdf_file.name, pdf_file, save=True)
 
+        is_proforma = invoice.invoice_type == "hosting"
+
+        subject = (
+            f"Išankstinė sąskaita – {client.name}"
+            if is_proforma
+            else f"PVM sąskaita faktūra {invoice.number} – {client.name}"
+        )
+
+        body = (
+            "Sveiki,\n\n"
+            f"Prisegame sąskaitą {invoice.number} už laikotarpį {invoice.period_from} – {invoice.period_to}.\n\n"
+            "Geros dienos.\n"
+        )
+
+        admin_copy_email = getattr(settings, "INVOICE_ADMIN_COPY_EMAIL", "").strip() or "info@mevika.lt"
+
         msg = EmailMessage(
-            subject=f"Sąskaita {invoice.number}",
-            body=(
-                f"Sveiki,\n\n"
-                f"Prisegame sąskaitą {invoice.number} už laikotarpį {invoice.period_from} – {invoice.period_to}.\n\n"
-                f"Geros dienos.\n"
-            ),
+            subject=subject,
+            body=body,
             from_email=getattr(settings, "DEFAULT_FROM_EMAIL", "no-reply@localhost"),
             to=recipients,
-            bcc=["vyga@infsis.lt"],   # 👈 čia įrašyk savo adresą
         )
 
         if getattr(invoice, "pdf", None) is not None and invoice.pdf:
             with invoice.pdf.open("rb") as f:
                 msg.attach(f"{invoice.number}.pdf", f.read(), "application/pdf")
+        
+        self.stdout.write(f"DEBUG recipients: {msg.recipients()}")
 
+        # Pagrindinis laiškas klientui
         msg.send(fail_silently=False)
         self.stdout.write(self.style.SUCCESS(f"📧 Išsiųsta: {invoice.number} → {', '.join(recipients)}"))
+
+        # Patikimas admin kopijos siuntimas (ne BCC), nes kai kurie SMTP nepristato BCC gavėjų
+        if admin_copy_email:
+            copy_msg = EmailMessage(
+                subject=f"[KOPIJA] {subject}",
+                body=body,
+                from_email=getattr(settings, "DEFAULT_FROM_EMAIL", "no-reply@localhost"),
+                to=[admin_copy_email],
+            )
+
+            if getattr(invoice, "pdf", None) is not None and invoice.pdf:
+                with invoice.pdf.open("rb") as f:
+                    copy_msg.attach(f"{invoice.number}.pdf", f.read(), "application/pdf")
+
+            copy_msg.send(fail_silently=False)
+            self.stdout.write(self.style.SUCCESS(f"📧 Kopija išsiųsta → {admin_copy_email}"))
 
     @transaction.atomic
     def generate_for_client(

@@ -1,34 +1,335 @@
 [
 {
   "model": "billing.client",
-  "pk": 1,
+  "pk": 3,
   "fields": {
-    "name": "Klientas 1",
-    "company_code": "123456789",
-    "vat_code": "",
-    "email": "vyga@kkkkdao.lt",
-    "address": "Adresas kliento",
+    "name": "SENTAURAS UAB",
+    "company_code": "125368032",
+    "vat_code": "LT253680314",
+    "email": "ruta@second-hand.lt",
+    "address": "Sandėlių g. 50, LT-02248 Vilnius",
     "active": true
   }
 },
 {
   "model": "billing.client",
-  "pk": 2,
+  "pk": 4,
   "fields": {
-    "name": "Klientas2",
-    "company_code": "987654321",
-    "vat_code": "LT1234567890",
-    "email": "vyga@kkkkdao.lt",
-    "address": "Adresas Klinetas2",
+    "name": "EKOTEKSAS UAB",
+    "company_code": "145288113",
+    "vat_code": "LT452881113",
+    "email": "info@ekoteksas.lt",
+    "address": "Ragainės g. 82G, LT-78109 Šiauliai",
+    "active": true
+  }
+},
+{
+  "model": "billing.client",
+  "pk": 5,
+  "fields": {
+    "name": "NOSMODUS UAB",
+    "company_code": "303256495",
+    "vat_code": "LT100008432616",
+    "email": "v.guscenko@gmail.com",
+    "address": "Sandėlių g. 50, LT-02248 Vilnius",
+    "active": true
+  }
+},
+{
+  "model": "billing.client",
+  "pk": 6,
+  "fields": {
+    "name": "RŪBAI UAB",
+    "company_code": "302716859",
+    "vat_code": "LT100006632416",
+    "email": "mockiene1960@gmail.com",
+    "address": "Tirkšlių g. 1, Mažeikiai",
+    "active": true
+  }
+},
+{
+  "model": "billing.client",
+  "pk": 7,
+  "fields": {
+    "name": "PALIATYVIOS MEDICINOS KLINIKA UAB",
+    "company_code": "305928237",
+    "vat_code": "",
+    "email": "r.rezgiene@gmail.com",
+    "address": "Kalno g. 28, LT-76360 Šiauliai",
+    "active": true
+  }
+},
+{
+  "model": "billing.client",
+  "pk": 8,
+  "fields": {
+    "name": "Globos ir slaugos centras \"Sidabražolė\" VšĮ",
+    "company_code": "305465732",
+    "vat_code": "",
+    "email": "r.rezgiene@gmail.com",
+    "address": "Darbininkų g. 27A, LT-76307 Šiauliai",
+    "active": true
+  }
+},
+{
+  "model": "billing.client",
+  "pk": 9,
+  "fields": {
+    "name": "Lietuvos hospisas VšĮ",
+    "company_code": "305699450",
+    "vat_code": "",
+    "email": "info@lietuvoshospisas.lt",
+    "address": "Daugų g. 5A, LT-62169 Alytus",
+    "active": true
+  }
+},
+{
+  "model": "billing.client",
+  "pk": 10,
+  "fields": {
+    "name": "NT SERVICE UAB",
+    "company_code": "135188876",
+    "vat_code": "LT351888716",
+    "email": "lile@rtp.lt",
+    "address": "Ateities pl. 34, LT-52165 Kaunas",
+    "active": true
+  }
+},
+{
+  "model": "billing.client",
+  "pk": 11,
+  "fields": {
+    "name": "Lietuvos Kyokushin Karate federacija",
+    "company_code": "190727235",
+    "vat_code": "",
+    "email": "info@kyokushin.lt",
+    "address": "Žemaitės g. 6, LT-03117 Vilnius",
+    "active": true
+  }
+},
+{
+  "model": "billing.client",
+  "pk": 12,
+  "fields": {
+    "name": "Prasmė LT, UAB",
+    "company_code": "305674970",
+    "vat_code": "",
+    "email": "vsiprasme@gmail.com",
+    "address": "Noreikių g. 58, Šiauliai",
     "active": true
   }
 },
 {
   "model": "billing.subscription",
-  "pk": 1,
+  "pk": 5,
   "fields": {
-    "client": 1,
+    "client": 11,
+    "title": "kyokushin.lt el.pašto ir www puslapio talpinimas",
+    "monthly_fee": "0.00",
+    "hosting_yearly_fee": "72.00",
+    "hosting_valid_until": "2027-01-01",
+    "active": true
+  }
+},
+{
+  "model": "billing.subscription",
+  "pk": 6,
+  "fields": {
+    "client": 10,
+    "title": "Duomenų bazės priežiūra,srauto ir vietos serveryje užtikrinimas DB informacines-sistemos.lt/NT",
+    "monthly_fee": "0.00",
+    "hosting_yearly_fee": "360.00",
+    "hosting_valid_until": "2027-01-01",
+    "active": true
+  }
+},
+{
+  "model": "billing.subscription",
+  "pk": 7,
+  "fields": {
+    "client": 5,
+    "title": "Duomenų bazės priežiūra,srauto ir vietos serveryje užtikrinimas DB nosmodus.infsis.lt",
+    "monthly_fee": "0.00",
+    "hosting_yearly_fee": "420.00",
+    "hosting_valid_until": "2027-01-01",
+    "active": true
+  }
+},
+{
+  "model": "billing.subscription",
+  "pk": 8,
+  "fields": {
+    "client": 5,
+    "title": "IS nosmodus.infsis.lt priežiūra",
     "monthly_fee": "35.00",
+    "hosting_yearly_fee": "0.00",
+    "hosting_valid_until": "2027-01-01",
+    "active": true
+  }
+},
+{
+  "model": "billing.subscription",
+  "pk": 9,
+  "fields": {
+    "client": 3,
+    "title": "Duomenų bazės priežiūra,srauto ir vietos serveryje užtikrinimas DB sentauras.infsis.lt",
+    "monthly_fee": "0.00",
+    "hosting_yearly_fee": "420.00",
+    "hosting_valid_until": "2027-01-01",
+    "active": true
+  }
+},
+{
+  "model": "billing.subscription",
+  "pk": 10,
+  "fields": {
+    "client": 3,
+    "title": "IS sentauras.infsis.lt priežiūra",
+    "monthly_fee": "35.00",
+    "hosting_yearly_fee": "0.00",
+    "hosting_valid_until": "2027-01-01",
+    "active": true
+  }
+},
+{
+  "model": "billing.subscription",
+  "pk": 11,
+  "fields": {
+    "client": 4,
+    "title": "Duomenų bazės priežiūra,srauto ir vietos serveryje užtikrinimas DB ekoteksas.infsis.lt",
+    "monthly_fee": "0.00",
+    "hosting_yearly_fee": "420.00",
+    "hosting_valid_until": "2027-01-01",
+    "active": true
+  }
+},
+{
+  "model": "billing.subscription",
+  "pk": 12,
+  "fields": {
+    "client": 4,
+    "title": "IS ekoteksasinfsis.lt priežiūra",
+    "monthly_fee": "35.00",
+    "hosting_yearly_fee": "0.00",
+    "hosting_valid_until": "2027-01-01",
+    "active": true
+  }
+},
+{
+  "model": "billing.subscription",
+  "pk": 13,
+  "fields": {
+    "client": 6,
+    "title": "Duomenų bazės priežiūra,srauto ir vietos serveryje užtikrinimas DB rubai.infsis.lt/VADYBA",
+    "monthly_fee": "0.00",
+    "hosting_yearly_fee": "360.00",
+    "hosting_valid_until": "2027-01-01",
+    "active": true
+  }
+},
+{
+  "model": "billing.subscription",
+  "pk": 14,
+  "fields": {
+    "client": 6,
+    "title": "Duomenų bazės priežiūra,srauto ir vietos serveryje užtikrinimas DB rubai.infsis.lt/VEIKALS",
+    "monthly_fee": "0.00",
+    "hosting_yearly_fee": "360.00",
+    "hosting_valid_until": "2027-01-01",
+    "active": true
+  }
+},
+{
+  "model": "billing.subscription",
+  "pk": 15,
+  "fields": {
+    "client": 6,
+    "title": "Duomenų bazės priežiūra,srauto ir vietos serveryje užtikrinimas DB rubai.infsis.lt/IKAINAVIMAS",
+    "monthly_fee": "0.00",
+    "hosting_yearly_fee": "360.00",
+    "hosting_valid_until": "2027-01-01",
+    "active": true
+  }
+},
+{
+  "model": "billing.subscription",
+  "pk": 16,
+  "fields": {
+    "client": 6,
+    "title": "IS priežiūra rubai.infsis.lt",
+    "monthly_fee": "75.00",
+    "hosting_yearly_fee": "0.00",
+    "hosting_valid_until": "2027-01-01",
+    "active": true
+  }
+},
+{
+  "model": "billing.subscription",
+  "pk": 17,
+  "fields": {
+    "client": 6,
+    "title": "SSL rubai.infsis.lt",
+    "monthly_fee": "0.00",
+    "hosting_yearly_fee": "100.00",
+    "hosting_valid_until": "2027-01-01",
+    "active": true
+  }
+},
+{
+  "model": "billing.subscription",
+  "pk": 18,
+  "fields": {
+    "client": 7,
+    "title": "IT sistemos priežiūra IT_OPTIMAL",
+    "monthly_fee": "300.00",
+    "hosting_yearly_fee": "0.00",
+    "hosting_valid_until": "2026-02-01",
+    "active": true
+  }
+},
+{
+  "model": "billing.subscription",
+  "pk": 19,
+  "fields": {
+    "client": 7,
+    "title": "IS tasklv.infsis.lt priežiūra",
+    "monthly_fee": "35.00",
+    "hosting_yearly_fee": "0.00",
+    "hosting_valid_until": "2026-02-01",
+    "active": true
+  }
+},
+{
+  "model": "billing.subscription",
+  "pk": 20,
+  "fields": {
+    "client": 7,
+    "title": "WEB puslapio paliatyviojislauga.lt priežiūra",
+    "monthly_fee": "25.00",
+    "hosting_yearly_fee": "0.00",
+    "hosting_valid_until": "2026-02-01",
+    "active": true
+  }
+},
+{
+  "model": "billing.subscription",
+  "pk": 21,
+  "fields": {
+    "client": 8,
+    "title": "WEB puslapio sidabražolė.lt priežiūra",
+    "monthly_fee": "25.00",
+    "hosting_yearly_fee": "0.00",
+    "hosting_valid_until": "2026-02-01",
+    "active": true
+  }
+},
+{
+  "model": "billing.subscription",
+  "pk": 22,
+  "fields": {
+    "client": 9,
+    "title": "Duomenų bazės priežiūra,srauto ir vietos serveryje užtikrinimas DB hospisas.infsis.lt",
+    "monthly_fee": "0.00",
     "hosting_yearly_fee": "360.00",
     "hosting_valid_until": "2026-02-01",
     "active": true
@@ -36,46 +337,103 @@
 },
 {
   "model": "billing.subscription",
-  "pk": 2,
+  "pk": 23,
   "fields": {
-    "client": 2,
-    "monthly_fee": "65.00",
+    "client": 12,
+    "title": "Duomenų bazės priežiūra,srauto ir vietos serveryje užtikrinimas DB prasme.infsis.lt",
+    "monthly_fee": "0.00",
     "hosting_yearly_fee": "360.00",
-    "hosting_valid_until": "2026-01-01",
+    "hosting_valid_until": "2026-09-01",
     "active": true
   }
 },
 {
   "model": "billing.clientemail",
-  "pk": 1,
+  "pk": 2,
   "fields": {
-    "client": 1,
-    "email": "vyga@informacines-sistemos.lt",
-    "email_type": "accounting",
+    "client": 5,
+    "email": "gintare.lykova@gmail.com",
+    "email_type": "administration",
+    "active": true
+  }
+},
+{
+  "model": "billing.clientemail",
+  "pk": 3,
+  "fields": {
+    "client": 6,
+    "email": "noreikiene.neringa@gmail.com",
+    "email_type": "administration",
+    "active": true
+  }
+},
+{
+  "model": "billing.clientemail",
+  "pk": 4,
+  "fields": {
+    "client": 10,
+    "email": "vidmantas@rtp.lt",
+    "email_type": "administration",
     "active": true
   }
 },
 {
   "model": "billing.worklog",
-  "pk": 1,
+  "pk": 3,
   "fields": {
-    "client": 1,
-    "date": "2026-01-25",
-    "description": "Programavimo darbai",
-    "quantity": "3.00",
+    "client": 8,
+    "date": "2026-01-26",
+    "description": "sidabražolė.lt domenas iki 2027-03-09",
+    "quantity": "1.00",
+    "unit_price": "13.99",
+    "billed": false
+  }
+},
+{
+  "model": "billing.worklog",
+  "pk": 4,
+  "fields": {
+    "client": 3,
+    "date": "2026-01-11",
+    "description": "Maišo sezono keitimas",
+    "quantity": "2.00",
     "unit_price": "35.00",
     "billed": false
   }
 },
 {
   "model": "billing.worklog",
-  "pk": 2,
+  "pk": 5,
   "fields": {
-    "client": 1,
-    "date": "2026-01-18",
-    "description": "IS ?diegimas serveryje",
+    "client": 3,
+    "date": "2026-01-22",
+    "description": "Ataskaita \"Maišai sendėlyje (Sezonas)",
+    "quantity": "1.00",
+    "unit_price": "75.00",
+    "billed": false
+  }
+},
+{
+  "model": "billing.worklog",
+  "pk": 6,
+  "fields": {
+    "client": 9,
+    "date": "2026-01-19",
+    "description": "IS įdiegimas serveryje prasme.infsis.lt, pradinių vartotojų sukūrimas",
     "quantity": "1.00",
     "unit_price": "600.00",
+    "billed": false
+  }
+},
+{
+  "model": "billing.worklog",
+  "pk": 7,
+  "fields": {
+    "client": 9,
+    "date": "2026-01-19",
+    "description": "GPS registravimo IS, hospisas.infsis.lt",
+    "quantity": "1.00",
+    "unit_price": "380.00",
     "billed": false
   }
 }

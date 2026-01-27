@@ -65,12 +65,19 @@ def generate_invoice_pdf(invoice) -> ContentFile:
     except Exception:
         pass
 
+    is_proforma = (getattr(invoice, "invoice_type", "") == "hosting")
+    doc_title = "IŠANKSTINĖ SĄSKAITA" if is_proforma else "PVM SĄSKAITA FAKTŪRA"
+    show_number = not is_proforma
+
     c.setFont("DejaVu-Bold", 16)
-    c.drawString(x, y, "PVM SĄSKAITA-FAKTŪRA")
+    c.drawString(x, y, f"{doc_title}")
     y -= 25
 
     c.setFont("DejaVu", 10)
-    c.drawString(x, y, f"Nr: {invoice.number}")
+    if show_number:
+        c.drawString(x, y, f"Nr: {invoice.number}")
+    else:   
+        c.drawString(x, y, f"")
     y -= 15
     c.drawString(x, y, f"Išrašymo data: {invoice.issued_date}")
     y -= 15

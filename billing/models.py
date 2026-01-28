@@ -109,6 +109,7 @@ class WorkLog(models.Model):
         default=False,
     )
 
+
     def total_price(self):
         return self.quantity * self.unit_price
 

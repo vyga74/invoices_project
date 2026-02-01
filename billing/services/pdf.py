@@ -25,11 +25,30 @@ def amount_to_words_lt(amount):
     from decimal import Decimal
     try:
         from num2words import num2words
+
         amt = Decimal(str(amount)).quantize(Decimal("0.01"))
         euros = int(amt)
         cents = int((amt - euros) * 100)
+
         words = num2words(euros, lang="lt")
-        return f"{words} eur {cents:02d} ct"
+
+        # Lithuanian declension rules for "euras"
+        last_two = euros % 100
+        last_one = euros % 10
+
+        if last_two in (11, 12, 13, 14):
+            euro_word = "eurų"
+        elif last_one == 1:
+            euro_word = "euras"
+        elif last_one in (2, 3, 4):
+            euro_word = "eurai"
+        else:
+            euro_word = "eurų"
+
+        if cents > 0:
+            return f"{words} {euro_word} {cents:02d} ct"
+        return f"{words} {euro_word}"
+
     except Exception:
         amt = Decimal(str(amount)).quantize(Decimal("0.01"))
         return f"{amt:.2f} EUR"
@@ -102,7 +121,7 @@ def generate_invoice_pdf(invoice) -> ContentFile:
         "Įmonės kodas: 302666445",
         "PVM kodas: LT100009187014",
         "A/S: LT114010044200904314",
-        "Adresas: Darbo g. 18, Kuršėnai",
+        "Adresas: Darbo g. 19, Kuršėnai",
     ]
     for s in seller_lines:
         c.drawString(left_x, seller_y, s)
@@ -219,6 +238,12 @@ def generate_invoice_pdf(invoice) -> ContentFile:
     y -= 22
     c.setFont("DejaVu", 10)
     c.drawString(x, y, f"Suma žodžiais: {amount_to_words_lt(gross_amount)}")
+
+    # 4) Suma žodžiais
+    y -= 22
+    c.setFont("DejaVu", 10)
+    c.drawString(x, y, f"Išrašė: Direktorius Vygandas Milieška")
+
 
     # Footer
     y -= 35

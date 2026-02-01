@@ -8,6 +8,9 @@ from decimal import Decimal
 from .models import Invoice, InvoiceLine
 from django.conf import settings
 from django.core.mail import EmailMessage
+from django.core.management import call_command
+from django.urls import path, reverse
+from django.shortcuts import redirect
 
 from billing.services.pdf import generate_invoice_pdf
 
@@ -203,10 +206,38 @@ class InvoiceAdmin(admin.ModelAdmin):
         "total_amount",
         "paid",
         "pdf_link",
+        "run_monthly_btn",
     )
     list_filter = ("invoice_type", "paid", "issued_date")
     search_fields = ("number", "client__name")
     inlines = [InvoiceLineInline]
+
+    def get_urls(self):
+        urls = super().get_urls()
+        custom_urls = [
+            path(
+                "run-monthly/",
+                self.admin_site.admin_view(self.run_monthly_view),
+                name="billing_invoice_run_monthly",
+            ),
+        ]
+        return custom_urls + urls
+
+    def run_monthly_view(self, request):
+        """Run monthly invoice generation using the management command."""
+        try:
+            # Uses the command's default behavior (on the 1st generates for previous month).
+            call_command("generate_monthly_invoices")
+            self.message_user(request, "✅ Mėnesinių sąskaitų generavimas paleistas ir įvykdytas.", level=messages.SUCCESS)
+        except Exception as exc:
+            self.message_user(request, f"❌ Nepavyko sugeneruoti mėnesinių sąskaitų: {exc}", level=messages.ERROR)
+        return redirect("admin:billing_invoice_changelist")
+
+    def run_monthly_btn(self, obj):
+        url = reverse("admin:billing_invoice_run_monthly")
+        return format_html('<a class="button" href="{}">Generuoti mėnesines</a>', url)
+
+    run_monthly_btn.short_description = "Mėnesinės"
 
     def pdf_link(self, obj):
         if obj.pdf:

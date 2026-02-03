@@ -96,7 +96,7 @@ def generate_invoice_pdf(invoice) -> ContentFile:
     if show_number:
         c.drawString(x, y, f"Nr: {invoice.number}")
     else:   
-        c.drawString(x, y, f"")
+        c.drawString(x, y, "")
     y -= 15
     c.drawString(x, y, f"Išrašymo data: {invoice.issued_date}")
     y -= 15

@@ -1,0 +1,2402 @@
+[
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "admin",
+    "model": "logentry"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "auth",
+    "model": "group"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "auth",
+    "model": "permission"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "auth",
+    "model": "user"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "contenttypes",
+    "model": "contenttype"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "sessions",
+    "model": "session"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "billing",
+    "model": "client"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "billing",
+    "model": "clientemail"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "billing",
+    "model": "invoice"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "billing",
+    "model": "invoiceline"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "billing",
+    "model": "subscription"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "billing",
+    "model": "worklog"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "h469w7b1v878nkjankm3bazgvsdv17hj",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQRO_iGln-O6Gkzxms9XqNA8iW4qRC3J1ESgHdaN6bebMA21rC1mkJc2JXJtnlt4uAT6oHSA-o98ax1XWZIz8UftLOp5bodTvdv4MCvexrIaK2Bh2iHk12ec-EmEehEsiMSrohk7WDAY_JJxMjRkWOlAavhfPs8wX7YDiL:1vsFUJ:qPzmkXvovZqGdzTZ0hdyTrn58Qx_9tKCDPwKjlAys1c",
+    "expire_date": "2026-03-03T07:27:15.675Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "i1vyk9xzucxc97fxd9fluo3ldn6fkvh5",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQRO_iGln-O6Gkzxms9XqNA8iW4qRC3J1ESgHdaN6bebMA21rC1mkJc2JXJtnlt4uAT6oHSA-o98ax1XWZIz8UftLOp5bodTvdv4MCvexrIaK2Bh2iHk12ec-EmEehEsiMSrohk7WDAY_JJxMjRkWOlAavhfPs8wX7YDiL:1vsEIw:7yAhkTwoJrFbTx9RTttcpP0VBCAkkL1pkcY-ZhKVp-U",
+    "expire_date": "2026-03-03T06:11:26.953Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "oi98ufmuvxziwpf7t3uz5qwgbqa72q0y",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQRO_iGln-O6Gkzxms9XqNA8iW4qRC3J1ESgHdaN6bebMA21rC1mkJc2JXJtnlt4uAT6oHSA-o98ax1XWZIz8UftLOp5bodTvdv4MCvexrIaK2Bh2iHk12ec-EmEehEsiMSrohk7WDAY_JJxMjRkWOlAavhfPs8wX7YDiL:1vl5An:LanmZ75CEUUq40VBFs_o1BR3exeZxu2qgtDYJpGSdUM",
+    "expire_date": "2026-02-11T13:01:29.778Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "wq12orvgne9cbyehkek6ymrho9ly8x98",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQRO_iGln-O6Gkzxms9XqNA8iW4qRC3J1ESgHdaN6bebMA21rC1mkJc2JXJtnlt4uAT6oHSA-o98ax1XWZIz8UftLOp5bodTvdv4MCvexrIaK2Bh2iHk12ec-EmEehEsiMSrohk7WDAY_JJxMjRkWOlAavhfPs8wX7YDiL:1vmT4p:QWn324SLHnPsjgjS6-1PzJkcXiEHrWqQVIoA8Clp9pk",
+    "expire_date": "2026-02-15T08:45:03.868Z"
+  }
+},
+{
+  "model": "billing.client",
+  "pk": 3,
+  "fields": {
+    "name": "SENTAURAS UAB",
+    "company_code": "125368032",
+    "vat_code": "LT253680314",
+    "email": "ruta@second-hand.lt",
+    "address": "Sandėlių g. 50, LT-02248 Vilnius",
+    "active": true
+  }
+},
+{
+  "model": "billing.client",
+  "pk": 4,
+  "fields": {
+    "name": "EKOTEKSAS UAB",
+    "company_code": "145288113",
+    "vat_code": "LT452881113",
+    "email": "info@ekoteksas.lt",
+    "address": "Ragainės g. 82G, LT-78109 Šiauliai",
+    "active": true
+  }
+},
+{
+  "model": "billing.client",
+  "pk": 5,
+  "fields": {
+    "name": "NOSMODUS UAB",
+    "company_code": "303256495",
+    "vat_code": "LT100008432616",
+    "email": "v.guscenko@gmail.com",
+    "address": "Sandėlių g. 50, LT-02248 Vilnius",
+    "active": true
+  }
+},
+{
+  "model": "billing.client",
+  "pk": 6,
+  "fields": {
+    "name": "RŪBAI UAB",
+    "company_code": "302716859",
+    "vat_code": "LT100006632416",
+    "email": "mockiene1960@gmail.com",
+    "address": "Tirkšlių g. 1, Mažeikiai",
+    "active": true
+  }
+},
+{
+  "model": "billing.client",
+  "pk": 7,
+  "fields": {
+    "name": "PALIATYVIOS MEDICINOS KLINIKA UAB",
+    "company_code": "305928237",
+    "vat_code": "",
+    "email": "r.rezgiene@gmail.com",
+    "address": "Kalno g. 28, LT-76360 Šiauliai",
+    "active": true
+  }
+},
+{
+  "model": "billing.client",
+  "pk": 8,
+  "fields": {
+    "name": "Globos ir slaugos centras \"Sidabražolė\" VšĮ",
+    "company_code": "305465732",
+    "vat_code": "",
+    "email": "r.rezgiene@gmail.com",
+    "address": "Darbininkų g. 27A, LT-76307 Šiauliai",
+    "active": true
+  }
+},
+{
+  "model": "billing.client",
+  "pk": 9,
+  "fields": {
+    "name": "Lietuvos hospisas VšĮ",
+    "company_code": "305699450",
+    "vat_code": "",
+    "email": "info@lietuvoshospisas.lt",
+    "address": "Daugų g. 5A, LT-62169 Alytus",
+    "active": true
+  }
+},
+{
+  "model": "billing.client",
+  "pk": 10,
+  "fields": {
+    "name": "NT SERVICE UAB",
+    "company_code": "135188876",
+    "vat_code": "LT351888716",
+    "email": "lile@rtp.lt",
+    "address": "Ateities pl. 34, LT-52165 Kaunas",
+    "active": true
+  }
+},
+{
+  "model": "billing.client",
+  "pk": 11,
+  "fields": {
+    "name": "Lietuvos Kyokushin Karate federacija",
+    "company_code": "190727235",
+    "vat_code": "",
+    "email": "info@kyokushin.lt",
+    "address": "Žemaitės g. 6, LT-03117 Vilnius",
+    "active": true
+  }
+},
+{
+  "model": "billing.client",
+  "pk": 12,
+  "fields": {
+    "name": "Prasmė LT, UAB",
+    "company_code": "305674970",
+    "vat_code": "",
+    "email": "vsiprasme@gmail.com",
+    "address": "Noreikių g. 58, Šiauliai",
+    "active": true
+  }
+},
+{
+  "model": "billing.client",
+  "pk": 13,
+  "fields": {
+    "name": "Band",
+    "company_code": "123456789",
+    "vat_code": "LT123456789",
+    "email": "vyga@kkkkdao.lt",
+    "address": "Adresas",
+    "active": true
+  }
+},
+{
+  "model": "billing.subscription",
+  "pk": 5,
+  "fields": {
+    "client": 11,
+    "title": "kyokushin.lt el.pašto ir www puslapio talpinimas",
+    "monthly_fee": "0.00",
+    "hosting_yearly_fee": "72.00",
+    "hosting_valid_until": "2027-01-01",
+    "active": true
+  }
+},
+{
+  "model": "billing.subscription",
+  "pk": 6,
+  "fields": {
+    "client": 10,
+    "title": "Duomenų bazės priežiūra,srauto ir vietos serveryje užtikrinimas DB informacines-sistemos.lt/NT",
+    "monthly_fee": "0.00",
+    "hosting_yearly_fee": "360.00",
+    "hosting_valid_until": "2027-01-01",
+    "active": true
+  }
+},
+{
+  "model": "billing.subscription",
+  "pk": 7,
+  "fields": {
+    "client": 5,
+    "title": "Duomenų bazės priežiūra,srauto ir vietos serveryje užtikrinimas DB nosmodus.infsis.lt",
+    "monthly_fee": "0.00",
+    "hosting_yearly_fee": "420.00",
+    "hosting_valid_until": "2027-01-01",
+    "active": true
+  }
+},
+{
+  "model": "billing.subscription",
+  "pk": 8,
+  "fields": {
+    "client": 5,
+    "title": "IS nosmodus.infsis.lt priežiūra",
+    "monthly_fee": "35.00",
+    "hosting_yearly_fee": "0.00",
+    "hosting_valid_until": "2027-01-01",
+    "active": true
+  }
+},
+{
+  "model": "billing.subscription",
+  "pk": 9,
+  "fields": {
+    "client": 3,
+    "title": "Duomenų bazės priežiūra,srauto ir vietos serveryje užtikrinimas DB sentauras.infsis.lt",
+    "monthly_fee": "0.00",
+    "hosting_yearly_fee": "420.00",
+    "hosting_valid_until": "2027-01-01",
+    "active": true
+  }
+},
+{
+  "model": "billing.subscription",
+  "pk": 10,
+  "fields": {
+    "client": 3,
+    "title": "IS sentauras.infsis.lt priežiūra",
+    "monthly_fee": "35.00",
+    "hosting_yearly_fee": "0.00",
+    "hosting_valid_until": "2027-01-01",
+    "active": true
+  }
+},
+{
+  "model": "billing.subscription",
+  "pk": 11,
+  "fields": {
+    "client": 4,
+    "title": "Duomenų bazės priežiūra,srauto ir vietos serveryje užtikrinimas DB ekoteksas.infsis.lt",
+    "monthly_fee": "0.00",
+    "hosting_yearly_fee": "420.00",
+    "hosting_valid_until": "2027-01-01",
+    "active": true
+  }
+},
+{
+  "model": "billing.subscription",
+  "pk": 12,
+  "fields": {
+    "client": 4,
+    "title": "IS ekoteksasinfsis.lt priežiūra",
+    "monthly_fee": "35.00",
+    "hosting_yearly_fee": "0.00",
+    "hosting_valid_until": "2027-01-01",
+    "active": true
+  }
+},
+{
+  "model": "billing.subscription",
+  "pk": 13,
+  "fields": {
+    "client": 6,
+    "title": "Duomenų bazės priežiūra,srauto ir vietos serveryje užtikrinimas DB rubai.infsis.lt/VADYBA",
+    "monthly_fee": "0.00",
+    "hosting_yearly_fee": "360.00",
+    "hosting_valid_until": "2027-01-01",
+    "active": true
+  }
+},
+{
+  "model": "billing.subscription",
+  "pk": 14,
+  "fields": {
+    "client": 6,
+    "title": "Duomenų bazės priežiūra,srauto ir vietos serveryje užtikrinimas DB rubai.infsis.lt/VEIKALS",
+    "monthly_fee": "0.00",
+    "hosting_yearly_fee": "360.00",
+    "hosting_valid_until": "2027-01-01",
+    "active": true
+  }
+},
+{
+  "model": "billing.subscription",
+  "pk": 15,
+  "fields": {
+    "client": 6,
+    "title": "Duomenų bazės priežiūra,srauto ir vietos serveryje užtikrinimas DB rubai.infsis.lt/IKAINAVIMAS",
+    "monthly_fee": "0.00",
+    "hosting_yearly_fee": "360.00",
+    "hosting_valid_until": "2027-01-01",
+    "active": true
+  }
+},
+{
+  "model": "billing.subscription",
+  "pk": 16,
+  "fields": {
+    "client": 6,
+    "title": "IS priežiūra rubai.infsis.lt",
+    "monthly_fee": "75.00",
+    "hosting_yearly_fee": "0.00",
+    "hosting_valid_until": "2027-01-01",
+    "active": true
+  }
+},
+{
+  "model": "billing.subscription",
+  "pk": 17,
+  "fields": {
+    "client": 6,
+    "title": "SSL rubai.infsis.lt",
+    "monthly_fee": "0.00",
+    "hosting_yearly_fee": "100.00",
+    "hosting_valid_until": "2027-01-01",
+    "active": true
+  }
+},
+{
+  "model": "billing.subscription",
+  "pk": 18,
+  "fields": {
+    "client": 7,
+    "title": "IT sistemos priežiūra IT_OPTIMAL",
+    "monthly_fee": "300.00",
+    "hosting_yearly_fee": "0.00",
+    "hosting_valid_until": "2026-02-01",
+    "active": true
+  }
+},
+{
+  "model": "billing.subscription",
+  "pk": 19,
+  "fields": {
+    "client": 7,
+    "title": "IS tasklv.infsis.lt priežiūra",
+    "monthly_fee": "35.00",
+    "hosting_yearly_fee": "0.00",
+    "hosting_valid_until": "2026-02-01",
+    "active": true
+  }
+},
+{
+  "model": "billing.subscription",
+  "pk": 20,
+  "fields": {
+    "client": 7,
+    "title": "WEB puslapio paliatyviojislauga.lt priežiūra",
+    "monthly_fee": "25.00",
+    "hosting_yearly_fee": "0.00",
+    "hosting_valid_until": "2026-02-01",
+    "active": true
+  }
+},
+{
+  "model": "billing.subscription",
+  "pk": 21,
+  "fields": {
+    "client": 8,
+    "title": "WEB puslapio sidabražolė.lt priežiūra",
+    "monthly_fee": "25.00",
+    "hosting_yearly_fee": "0.00",
+    "hosting_valid_until": "2026-02-01",
+    "active": true
+  }
+},
+{
+  "model": "billing.subscription",
+  "pk": 23,
+  "fields": {
+    "client": 12,
+    "title": "Duomenų bazės priežiūra,srauto ir vietos serveryje užtikrinimas DB prasme.infsis.lt",
+    "monthly_fee": "0.00",
+    "hosting_yearly_fee": "360.00",
+    "hosting_valid_until": "2026-09-01",
+    "active": true
+  }
+},
+{
+  "model": "billing.subscription",
+  "pk": 24,
+  "fields": {
+    "client": 9,
+    "title": "Duomenų bazės priežiūra,srauto ir vietos serveryje užtikrinimas DB hospisas.infsis.lt 12 mėn",
+    "monthly_fee": "0.00",
+    "hosting_yearly_fee": "360.00",
+    "hosting_valid_until": "2027-02-01",
+    "active": true
+  }
+},
+{
+  "model": "billing.subscription",
+  "pk": 27,
+  "fields": {
+    "client": 13,
+    "title": "Bandymas",
+    "monthly_fee": "0.00",
+    "hosting_yearly_fee": "100.00",
+    "hosting_valid_until": "2026-02-24",
+    "active": true
+  }
+},
+{
+  "model": "billing.clientemail",
+  "pk": 2,
+  "fields": {
+    "client": 5,
+    "email": "gintare.lykova@gmail.com",
+    "email_type": "administration",
+    "active": true
+  }
+},
+{
+  "model": "billing.clientemail",
+  "pk": 3,
+  "fields": {
+    "client": 6,
+    "email": "noreikiene.neringa@gmail.com",
+    "email_type": "administration",
+    "active": true
+  }
+},
+{
+  "model": "billing.clientemail",
+  "pk": 4,
+  "fields": {
+    "client": 10,
+    "email": "vidmantas@rtp.lt",
+    "email_type": "administration",
+    "active": true
+  }
+},
+{
+  "model": "billing.worklog",
+  "pk": 3,
+  "fields": {
+    "client": 8,
+    "date": "2026-01-26",
+    "description": "sidabražolė.lt domenas iki 2027-03-09",
+    "quantity": "1.00",
+    "unit_price": "13.99",
+    "billed": true
+  }
+},
+{
+  "model": "billing.worklog",
+  "pk": 4,
+  "fields": {
+    "client": 3,
+    "date": "2026-01-11",
+    "description": "Maišo sezono keitimas",
+    "quantity": "2.00",
+    "unit_price": "35.00",
+    "billed": true
+  }
+},
+{
+  "model": "billing.worklog",
+  "pk": 5,
+  "fields": {
+    "client": 3,
+    "date": "2026-01-22",
+    "description": "Ataskaita \"Maišai sendėlyje (Sezonas)",
+    "quantity": "1.00",
+    "unit_price": "75.00",
+    "billed": true
+  }
+},
+{
+  "model": "billing.worklog",
+  "pk": 6,
+  "fields": {
+    "client": 9,
+    "date": "2026-01-19",
+    "description": "IS įdiegimas serveryje prasme.infsis.lt, pradinių vartotojų sukūrimas",
+    "quantity": "1.00",
+    "unit_price": "600.00",
+    "billed": true
+  }
+},
+{
+  "model": "billing.worklog",
+  "pk": 7,
+  "fields": {
+    "client": 9,
+    "date": "2026-01-19",
+    "description": "GPS registravimo IS, hospisas.infsis.lt",
+    "quantity": "1.00",
+    "unit_price": "380.00",
+    "billed": true
+  }
+},
+{
+  "model": "billing.worklog",
+  "pk": 8,
+  "fields": {
+    "client": 9,
+    "date": "2026-01-19",
+    "description": "DB talpnimas hospisas.infsis.lt metams iki 2027-02-01",
+    "quantity": "1.00",
+    "unit_price": "360.00",
+    "billed": true
+  }
+},
+{
+  "model": "billing.worklog",
+  "pk": 11,
+  "fields": {
+    "client": 8,
+    "date": "2026-02-04",
+    "description": "Perfect SSL sidbražolė.lt iki 2027-03-04",
+    "quantity": "1.00",
+    "unit_price": "26.66",
+    "billed": false
+  }
+},
+{
+  "model": "billing.worklog",
+  "pk": 12,
+  "fields": {
+    "client": 7,
+    "date": "2026-02-04",
+    "description": "Perfect SSL paliatyviojislauga.lt iki 2027-03-04",
+    "quantity": "1.00",
+    "unit_price": "26.66",
+    "billed": false
+  }
+},
+{
+  "model": "billing.invoice",
+  "pk": 21,
+  "fields": {
+    "number": "MEV26-001",
+    "client": 9,
+    "invoice_type": "manual",
+    "period_from": "2026-01-19",
+    "period_to": "2026-01-19",
+    "issued_date": "2026-02-01",
+    "due_date": "2026-02-11",
+    "net_amount": "1340.00",
+    "vat_rate": "0.2100",
+    "vat_amount": "281.40",
+    "total_amount": "1621.40",
+    "paid": false,
+    "pdf": "invoices/2026/02/MEV26-001_zgTjxW5.pdf"
+  }
+},
+{
+  "model": "billing.invoice",
+  "pk": 22,
+  "fields": {
+    "number": "MEV26-002",
+    "client": 3,
+    "invoice_type": "monthly",
+    "period_from": "2026-01-01",
+    "period_to": "2026-01-31",
+    "issued_date": "2026-01-31",
+    "due_date": "2026-02-14",
+    "net_amount": "180.00",
+    "vat_rate": "0.2100",
+    "vat_amount": "37.80",
+    "total_amount": "217.80",
+    "paid": false,
+    "pdf": "invoices/2026/02/MEV26-002_q5b6XJG.pdf"
+  }
+},
+{
+  "model": "billing.invoice",
+  "pk": 23,
+  "fields": {
+    "number": "MEV26-003",
+    "client": 4,
+    "invoice_type": "monthly",
+    "period_from": "2026-01-01",
+    "period_to": "2026-01-31",
+    "issued_date": "2026-01-31",
+    "due_date": "2026-02-14",
+    "net_amount": "35.00",
+    "vat_rate": "0.2100",
+    "vat_amount": "7.35",
+    "total_amount": "42.35",
+    "paid": false,
+    "pdf": "invoices/2026/02/MEV26-003_D7Fx8au.pdf"
+  }
+},
+{
+  "model": "billing.invoice",
+  "pk": 24,
+  "fields": {
+    "number": "MEV26-004",
+    "client": 5,
+    "invoice_type": "monthly",
+    "period_from": "2026-01-01",
+    "period_to": "2026-01-31",
+    "issued_date": "2026-01-31",
+    "due_date": "2026-02-14",
+    "net_amount": "35.00",
+    "vat_rate": "0.2100",
+    "vat_amount": "7.35",
+    "total_amount": "42.35",
+    "paid": false,
+    "pdf": "invoices/2026/02/MEV26-004.pdf"
+  }
+},
+{
+  "model": "billing.invoice",
+  "pk": 25,
+  "fields": {
+    "number": "MEV26-005",
+    "client": 6,
+    "invoice_type": "monthly",
+    "period_from": "2026-01-01",
+    "period_to": "2026-01-31",
+    "issued_date": "2026-01-31",
+    "due_date": "2026-02-14",
+    "net_amount": "75.00",
+    "vat_rate": "0.2100",
+    "vat_amount": "15.75",
+    "total_amount": "90.75",
+    "paid": false,
+    "pdf": "invoices/2026/02/MEV26-005.pdf"
+  }
+},
+{
+  "model": "billing.invoice",
+  "pk": 26,
+  "fields": {
+    "number": "MEV26-006",
+    "client": 7,
+    "invoice_type": "monthly",
+    "period_from": "2026-01-01",
+    "period_to": "2026-01-31",
+    "issued_date": "2026-01-31",
+    "due_date": "2026-02-14",
+    "net_amount": "360.00",
+    "vat_rate": "0.2100",
+    "vat_amount": "75.60",
+    "total_amount": "435.60",
+    "paid": false,
+    "pdf": "invoices/2026/02/MEV26-006.pdf"
+  }
+},
+{
+  "model": "billing.invoice",
+  "pk": 27,
+  "fields": {
+    "number": "MEV26-007",
+    "client": 8,
+    "invoice_type": "monthly",
+    "period_from": "2026-01-01",
+    "period_to": "2026-01-31",
+    "issued_date": "2026-01-31",
+    "due_date": "2026-02-14",
+    "net_amount": "38.99",
+    "vat_rate": "0.2100",
+    "vat_amount": "8.19",
+    "total_amount": "47.18",
+    "paid": false,
+    "pdf": "invoices/2026/02/MEV26-007.pdf"
+  }
+},
+{
+  "model": "billing.invoiceline",
+  "pk": 21,
+  "fields": {
+    "invoice": 21,
+    "description": "DB talpnimas hospisas.infsis.lt metams iki 2027-02-01",
+    "quantity": "1.00",
+    "unit_price": "360.00",
+    "total": "360.00"
+  }
+},
+{
+  "model": "billing.invoiceline",
+  "pk": 22,
+  "fields": {
+    "invoice": 21,
+    "description": "GPS registravimo IS, hospisas.infsis.lt",
+    "quantity": "1.00",
+    "unit_price": "380.00",
+    "total": "380.00"
+  }
+},
+{
+  "model": "billing.invoiceline",
+  "pk": 23,
+  "fields": {
+    "invoice": 21,
+    "description": "IS įdiegimas serveryje prasme.infsis.lt, pradinių vartotojų sukūrimas",
+    "quantity": "1.00",
+    "unit_price": "600.00",
+    "total": "600.00"
+  }
+},
+{
+  "model": "billing.invoiceline",
+  "pk": 24,
+  "fields": {
+    "invoice": 22,
+    "description": "IS sentauras.infsis.lt priežiūra",
+    "quantity": "1.00",
+    "unit_price": "35.00",
+    "total": "35.00"
+  }
+},
+{
+  "model": "billing.invoiceline",
+  "pk": 25,
+  "fields": {
+    "invoice": 22,
+    "description": "Maišo sezono keitimas",
+    "quantity": "2.00",
+    "unit_price": "35.00",
+    "total": "70.00"
+  }
+},
+{
+  "model": "billing.invoiceline",
+  "pk": 26,
+  "fields": {
+    "invoice": 22,
+    "description": "Ataskaita \"Maišai sendėlyje (Sezonas)",
+    "quantity": "1.00",
+    "unit_price": "75.00",
+    "total": "75.00"
+  }
+},
+{
+  "model": "billing.invoiceline",
+  "pk": 27,
+  "fields": {
+    "invoice": 23,
+    "description": "IS ekoteksasinfsis.lt priežiūra",
+    "quantity": "1.00",
+    "unit_price": "35.00",
+    "total": "35.00"
+  }
+},
+{
+  "model": "billing.invoiceline",
+  "pk": 28,
+  "fields": {
+    "invoice": 24,
+    "description": "IS nosmodus.infsis.lt priežiūra",
+    "quantity": "1.00",
+    "unit_price": "35.00",
+    "total": "35.00"
+  }
+},
+{
+  "model": "billing.invoiceline",
+  "pk": 29,
+  "fields": {
+    "invoice": 25,
+    "description": "IS priežiūra rubai.infsis.lt",
+    "quantity": "1.00",
+    "unit_price": "75.00",
+    "total": "75.00"
+  }
+},
+{
+  "model": "billing.invoiceline",
+  "pk": 30,
+  "fields": {
+    "invoice": 26,
+    "description": "IT sistemos priežiūra IT_OPTIMAL",
+    "quantity": "1.00",
+    "unit_price": "300.00",
+    "total": "300.00"
+  }
+},
+{
+  "model": "billing.invoiceline",
+  "pk": 31,
+  "fields": {
+    "invoice": 26,
+    "description": "IS tasklv.infsis.lt priežiūra",
+    "quantity": "1.00",
+    "unit_price": "35.00",
+    "total": "35.00"
+  }
+},
+{
+  "model": "billing.invoiceline",
+  "pk": 32,
+  "fields": {
+    "invoice": 26,
+    "description": "WEB puslapio paliatyviojislauga.lt priežiūra",
+    "quantity": "1.00",
+    "unit_price": "25.00",
+    "total": "25.00"
+  }
+},
+{
+  "model": "billing.invoiceline",
+  "pk": 33,
+  "fields": {
+    "invoice": 27,
+    "description": "WEB puslapio sidabražolė.lt priežiūra",
+    "quantity": "1.00",
+    "unit_price": "25.00",
+    "total": "25.00"
+  }
+},
+{
+  "model": "billing.invoiceline",
+  "pk": 34,
+  "fields": {
+    "invoice": 27,
+    "description": "sidabražolė.lt domenas iki 2027-03-09",
+    "quantity": "1.00",
+    "unit_price": "13.99",
+    "total": "13.99"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add log entry",
+    "content_type": [
+      "admin",
+      "logentry"
+    ],
+    "codename": "add_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change log entry",
+    "content_type": [
+      "admin",
+      "logentry"
+    ],
+    "codename": "change_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete log entry",
+    "content_type": [
+      "admin",
+      "logentry"
+    ],
+    "codename": "delete_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view log entry",
+    "content_type": [
+      "admin",
+      "logentry"
+    ],
+    "codename": "view_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add permission",
+    "content_type": [
+      "auth",
+      "permission"
+    ],
+    "codename": "add_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change permission",
+    "content_type": [
+      "auth",
+      "permission"
+    ],
+    "codename": "change_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete permission",
+    "content_type": [
+      "auth",
+      "permission"
+    ],
+    "codename": "delete_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view permission",
+    "content_type": [
+      "auth",
+      "permission"
+    ],
+    "codename": "view_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add group",
+    "content_type": [
+      "auth",
+      "group"
+    ],
+    "codename": "add_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change group",
+    "content_type": [
+      "auth",
+      "group"
+    ],
+    "codename": "change_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete group",
+    "content_type": [
+      "auth",
+      "group"
+    ],
+    "codename": "delete_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view group",
+    "content_type": [
+      "auth",
+      "group"
+    ],
+    "codename": "view_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add user",
+    "content_type": [
+      "auth",
+      "user"
+    ],
+    "codename": "add_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change user",
+    "content_type": [
+      "auth",
+      "user"
+    ],
+    "codename": "change_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete user",
+    "content_type": [
+      "auth",
+      "user"
+    ],
+    "codename": "delete_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view user",
+    "content_type": [
+      "auth",
+      "user"
+    ],
+    "codename": "view_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add content type",
+    "content_type": [
+      "contenttypes",
+      "contenttype"
+    ],
+    "codename": "add_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change content type",
+    "content_type": [
+      "contenttypes",
+      "contenttype"
+    ],
+    "codename": "change_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete content type",
+    "content_type": [
+      "contenttypes",
+      "contenttype"
+    ],
+    "codename": "delete_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view content type",
+    "content_type": [
+      "contenttypes",
+      "contenttype"
+    ],
+    "codename": "view_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add session",
+    "content_type": [
+      "sessions",
+      "session"
+    ],
+    "codename": "add_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change session",
+    "content_type": [
+      "sessions",
+      "session"
+    ],
+    "codename": "change_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete session",
+    "content_type": [
+      "sessions",
+      "session"
+    ],
+    "codename": "delete_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view session",
+    "content_type": [
+      "sessions",
+      "session"
+    ],
+    "codename": "view_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add client",
+    "content_type": [
+      "billing",
+      "client"
+    ],
+    "codename": "add_client"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change client",
+    "content_type": [
+      "billing",
+      "client"
+    ],
+    "codename": "change_client"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete client",
+    "content_type": [
+      "billing",
+      "client"
+    ],
+    "codename": "delete_client"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view client",
+    "content_type": [
+      "billing",
+      "client"
+    ],
+    "codename": "view_client"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add subscription",
+    "content_type": [
+      "billing",
+      "subscription"
+    ],
+    "codename": "add_subscription"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change subscription",
+    "content_type": [
+      "billing",
+      "subscription"
+    ],
+    "codename": "change_subscription"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete subscription",
+    "content_type": [
+      "billing",
+      "subscription"
+    ],
+    "codename": "delete_subscription"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view subscription",
+    "content_type": [
+      "billing",
+      "subscription"
+    ],
+    "codename": "view_subscription"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add client email",
+    "content_type": [
+      "billing",
+      "clientemail"
+    ],
+    "codename": "add_clientemail"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change client email",
+    "content_type": [
+      "billing",
+      "clientemail"
+    ],
+    "codename": "change_clientemail"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete client email",
+    "content_type": [
+      "billing",
+      "clientemail"
+    ],
+    "codename": "delete_clientemail"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view client email",
+    "content_type": [
+      "billing",
+      "clientemail"
+    ],
+    "codename": "view_clientemail"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add work log",
+    "content_type": [
+      "billing",
+      "worklog"
+    ],
+    "codename": "add_worklog"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change work log",
+    "content_type": [
+      "billing",
+      "worklog"
+    ],
+    "codename": "change_worklog"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete work log",
+    "content_type": [
+      "billing",
+      "worklog"
+    ],
+    "codename": "delete_worklog"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view work log",
+    "content_type": [
+      "billing",
+      "worklog"
+    ],
+    "codename": "view_worklog"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add invoice",
+    "content_type": [
+      "billing",
+      "invoice"
+    ],
+    "codename": "add_invoice"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change invoice",
+    "content_type": [
+      "billing",
+      "invoice"
+    ],
+    "codename": "change_invoice"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete invoice",
+    "content_type": [
+      "billing",
+      "invoice"
+    ],
+    "codename": "delete_invoice"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view invoice",
+    "content_type": [
+      "billing",
+      "invoice"
+    ],
+    "codename": "view_invoice"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add invoice line",
+    "content_type": [
+      "billing",
+      "invoiceline"
+    ],
+    "codename": "add_invoiceline"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change invoice line",
+    "content_type": [
+      "billing",
+      "invoiceline"
+    ],
+    "codename": "change_invoiceline"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete invoice line",
+    "content_type": [
+      "billing",
+      "invoiceline"
+    ],
+    "codename": "delete_invoiceline"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view invoice line",
+    "content_type": [
+      "billing",
+      "invoiceline"
+    ],
+    "codename": "view_invoiceline"
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$NeUABpUIUTmEZf46KY7WlR$KQ4Vj+R4aL+tl7rfj2G6VnlMkewHZYSMSDYfP9SGQMA=",
+    "last_login": "2026-02-17T07:27:15.674Z",
+    "is_superuser": true,
+    "username": "Vyga",
+    "first_name": "",
+    "last_name": "",
+    "email": "vyga@infsis.lt",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-01-27T12:53:31.423Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2026-01-27T12:56:57.701Z",
+    "user": [
+      "Vyga"
+    ],
+    "content_type": [
+      "billing",
+      "worklog"
+    ],
+    "object_id": "8",
+    "object_repr": "Lietuvos hospisas VšĮ – 2026-01-19 – DB talpnimas hospisas.infsis.lt metams iki 2027-02-01",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2026-01-27T12:58:30.969Z",
+    "user": [
+      "Vyga"
+    ],
+    "content_type": [
+      "billing",
+      "subscription"
+    ],
+    "object_id": "24",
+    "object_repr": "Lietuvos hospisas VšĮ: Duomenų bazės priežiūra,srauto ir vietos serveryje užtikrinimas DB hospisas.infsis.lt 12 mėn",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2026-01-27T13:13:30.542Z",
+    "user": [
+      "Vyga"
+    ],
+    "content_type": [
+      "billing",
+      "client"
+    ],
+    "object_id": "13",
+    "object_repr": "Band",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2026-01-27T13:14:07.385Z",
+    "user": [
+      "Vyga"
+    ],
+    "content_type": [
+      "billing",
+      "subscription"
+    ],
+    "object_id": "25",
+    "object_repr": "Band: Mokestis per metus",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2026-01-27T14:10:11.089Z",
+    "user": [
+      "Vyga"
+    ],
+    "content_type": [
+      "billing",
+      "invoice"
+    ],
+    "object_id": "2",
+    "object_repr": "MEV26-002 – Band",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2026-01-27T14:10:11.090Z",
+    "user": [
+      "Vyga"
+    ],
+    "content_type": [
+      "billing",
+      "invoice"
+    ],
+    "object_id": "1",
+    "object_repr": "MEV26-001 – Lietuvos hospisas VšĮ",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2026-01-27T14:10:42.466Z",
+    "user": [
+      "Vyga"
+    ],
+    "content_type": [
+      "billing",
+      "subscription"
+    ],
+    "object_id": "22",
+    "object_repr": "Lietuvos hospisas VšĮ: Duomenų bazės priežiūra,srauto ir vietos serveryje užtikrinimas DB hospisas.infsis.lt",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2026-01-27T15:08:01.836Z",
+    "user": [
+      "Vyga"
+    ],
+    "content_type": [
+      "billing",
+      "invoice"
+    ],
+    "object_id": "3",
+    "object_repr": "MEV26-001 – Band",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2026-01-27T15:17:21.776Z",
+    "user": [
+      "Vyga"
+    ],
+    "content_type": [
+      "billing",
+      "invoice"
+    ],
+    "object_id": "4",
+    "object_repr": "MEV26-001 – Band",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2026-01-27T15:19:36.227Z",
+    "user": [
+      "Vyga"
+    ],
+    "content_type": [
+      "billing",
+      "client"
+    ],
+    "object_id": "13",
+    "object_repr": "Band",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"El. pa\\u0161tas\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2026-01-27T15:34:34.242Z",
+    "user": [
+      "Vyga"
+    ],
+    "content_type": [
+      "billing",
+      "invoice"
+    ],
+    "object_id": "5",
+    "object_repr": "MEV26-001 – Band",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2026-01-27T15:38:52.415Z",
+    "user": [
+      "Vyga"
+    ],
+    "content_type": [
+      "billing",
+      "invoice"
+    ],
+    "object_id": "6",
+    "object_repr": "MEV26-001 – Band",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 13,
+  "fields": {
+    "action_time": "2026-01-27T15:41:54.498Z",
+    "user": [
+      "Vyga"
+    ],
+    "content_type": [
+      "billing",
+      "invoice"
+    ],
+    "object_id": "7",
+    "object_repr": "MEV26-001 – Band",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 14,
+  "fields": {
+    "action_time": "2026-01-27T15:52:55.532Z",
+    "user": [
+      "Vyga"
+    ],
+    "content_type": [
+      "billing",
+      "invoice"
+    ],
+    "object_id": "8",
+    "object_repr": "MEV26-001 – Band",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 15,
+  "fields": {
+    "action_time": "2026-01-28T13:19:05.405Z",
+    "user": [
+      "Vyga"
+    ],
+    "content_type": [
+      "billing",
+      "worklog"
+    ],
+    "object_id": "9",
+    "object_repr": "Band – 2026-01-28 – Bandymas",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 16,
+  "fields": {
+    "action_time": "2026-01-28T13:23:53.325Z",
+    "user": [
+      "Vyga"
+    ],
+    "content_type": [
+      "billing",
+      "invoice"
+    ],
+    "object_id": "10",
+    "object_repr": "AUTO-20260128-13 – Band",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 17,
+  "fields": {
+    "action_time": "2026-01-28T13:23:53.325Z",
+    "user": [
+      "Vyga"
+    ],
+    "content_type": [
+      "billing",
+      "invoice"
+    ],
+    "object_id": "9",
+    "object_repr": "MEV26-001 – Band",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 18,
+  "fields": {
+    "action_time": "2026-01-28T13:27:49.748Z",
+    "user": [
+      "Vyga"
+    ],
+    "content_type": [
+      "billing",
+      "worklog"
+    ],
+    "object_id": "9",
+    "object_repr": "Band – 2026-01-28 – Bandymas",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u012etraukta \\u012f s\\u0105skait\\u0105\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 19,
+  "fields": {
+    "action_time": "2026-01-28T13:42:08.697Z",
+    "user": [
+      "Vyga"
+    ],
+    "content_type": [
+      "billing",
+      "invoice"
+    ],
+    "object_id": "11",
+    "object_repr": "AUTO-20260128-13 – Band",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 20,
+  "fields": {
+    "action_time": "2026-01-28T13:42:18.690Z",
+    "user": [
+      "Vyga"
+    ],
+    "content_type": [
+      "billing",
+      "worklog"
+    ],
+    "object_id": "9",
+    "object_repr": "Band – 2026-01-28 – Bandymas",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u012etraukta \\u012f s\\u0105skait\\u0105\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 21,
+  "fields": {
+    "action_time": "2026-01-28T13:49:11.162Z",
+    "user": [
+      "Vyga"
+    ],
+    "content_type": [
+      "billing",
+      "invoice"
+    ],
+    "object_id": "12",
+    "object_repr": "AUTO-20260128-13 – Band",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 22,
+  "fields": {
+    "action_time": "2026-01-28T13:49:16.859Z",
+    "user": [
+      "Vyga"
+    ],
+    "content_type": [
+      "billing",
+      "worklog"
+    ],
+    "object_id": "9",
+    "object_repr": "Band – 2026-01-28 – Bandymas",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u012etraukta \\u012f s\\u0105skait\\u0105\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 23,
+  "fields": {
+    "action_time": "2026-01-28T13:51:16.772Z",
+    "user": [
+      "Vyga"
+    ],
+    "content_type": [
+      "billing",
+      "worklog"
+    ],
+    "object_id": "9",
+    "object_repr": "Band – 2026-01-28 – Bandymas",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u012etraukta \\u012f s\\u0105skait\\u0105\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 24,
+  "fields": {
+    "action_time": "2026-01-28T14:05:08.232Z",
+    "user": [
+      "Vyga"
+    ],
+    "content_type": [
+      "billing",
+      "worklog"
+    ],
+    "object_id": "9",
+    "object_repr": "Band – 2026-01-28 – Bandymas",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 25,
+  "fields": {
+    "action_time": "2026-01-28T14:05:34.100Z",
+    "user": [
+      "Vyga"
+    ],
+    "content_type": [
+      "billing",
+      "worklog"
+    ],
+    "object_id": "9",
+    "object_repr": "Band – 2026-01-28 – Bandymas",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u012etraukta \\u012f s\\u0105skait\\u0105\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 26,
+  "fields": {
+    "action_time": "2026-01-28T14:05:54.596Z",
+    "user": [
+      "Vyga"
+    ],
+    "content_type": [
+      "billing",
+      "invoice"
+    ],
+    "object_id": "15",
+    "object_repr": "MEV26-002 – Band",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 27,
+  "fields": {
+    "action_time": "2026-01-28T14:05:54.596Z",
+    "user": [
+      "Vyga"
+    ],
+    "content_type": [
+      "billing",
+      "invoice"
+    ],
+    "object_id": "14",
+    "object_repr": "MEV26-001 – Band",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 28,
+  "fields": {
+    "action_time": "2026-01-28T14:05:54.596Z",
+    "user": [
+      "Vyga"
+    ],
+    "content_type": [
+      "billing",
+      "invoice"
+    ],
+    "object_id": "13",
+    "object_repr": "AUTO-20260128-13 – Band",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 29,
+  "fields": {
+    "action_time": "2026-01-28T14:06:12.220Z",
+    "user": [
+      "Vyga"
+    ],
+    "content_type": [
+      "billing",
+      "worklog"
+    ],
+    "object_id": "9",
+    "object_repr": "Band – 2026-01-28 – Bandymas",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 30,
+  "fields": {
+    "action_time": "2026-02-01T07:31:26.831Z",
+    "user": [
+      "Vyga"
+    ],
+    "content_type": [
+      "billing",
+      "worklog"
+    ],
+    "object_id": "10",
+    "object_repr": "Band – 2026-01-21 – band",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 31,
+  "fields": {
+    "action_time": "2026-02-01T07:44:15.814Z",
+    "user": [
+      "Vyga"
+    ],
+    "content_type": [
+      "billing",
+      "worklog"
+    ],
+    "object_id": "10",
+    "object_repr": "Band – 2026-01-21 – band",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u012etraukta \\u012f s\\u0105skait\\u0105\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 32,
+  "fields": {
+    "action_time": "2026-02-01T08:08:36.028Z",
+    "user": [
+      "Vyga"
+    ],
+    "content_type": [
+      "billing",
+      "worklog"
+    ],
+    "object_id": "10",
+    "object_repr": "Band – 2026-01-21 – band",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u012etraukta \\u012f s\\u0105skait\\u0105\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 33,
+  "fields": {
+    "action_time": "2026-02-01T08:09:24.560Z",
+    "user": [
+      "Vyga"
+    ],
+    "content_type": [
+      "billing",
+      "invoice"
+    ],
+    "object_id": "18",
+    "object_repr": "MEV26-003 – Band",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 34,
+  "fields": {
+    "action_time": "2026-02-01T08:09:24.560Z",
+    "user": [
+      "Vyga"
+    ],
+    "content_type": [
+      "billing",
+      "invoice"
+    ],
+    "object_id": "17",
+    "object_repr": "MEV26-002 – Band",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 35,
+  "fields": {
+    "action_time": "2026-02-01T08:09:24.560Z",
+    "user": [
+      "Vyga"
+    ],
+    "content_type": [
+      "billing",
+      "invoice"
+    ],
+    "object_id": "16",
+    "object_repr": "MEV26-001 – Band",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 36,
+  "fields": {
+    "action_time": "2026-02-01T08:24:15.491Z",
+    "user": [
+      "Vyga"
+    ],
+    "content_type": [
+      "billing",
+      "worklog"
+    ],
+    "object_id": "10",
+    "object_repr": "Band – 2026-01-21 – band",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u012etraukta \\u012f s\\u0105skait\\u0105\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 37,
+  "fields": {
+    "action_time": "2026-02-01T08:25:17.196Z",
+    "user": [
+      "Vyga"
+    ],
+    "content_type": [
+      "billing",
+      "invoice"
+    ],
+    "object_id": "19",
+    "object_repr": "MEV26-001 – Band",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 38,
+  "fields": {
+    "action_time": "2026-02-01T08:25:51.440Z",
+    "user": [
+      "Vyga"
+    ],
+    "content_type": [
+      "billing",
+      "worklog"
+    ],
+    "object_id": "10",
+    "object_repr": "Band – 2026-01-21 – band",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u012etraukta \\u012f s\\u0105skait\\u0105\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 39,
+  "fields": {
+    "action_time": "2026-02-01T08:26:42.580Z",
+    "user": [
+      "Vyga"
+    ],
+    "content_type": [
+      "billing",
+      "invoice"
+    ],
+    "object_id": "20",
+    "object_repr": "MEV26-001 – Band",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 40,
+  "fields": {
+    "action_time": "2026-02-01T08:45:27.779Z",
+    "user": [
+      "Vyga"
+    ],
+    "content_type": [
+      "billing",
+      "worklog"
+    ],
+    "object_id": "10",
+    "object_repr": "Band – 2026-01-21 – band",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u012etraukta \\u012f s\\u0105skait\\u0105\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 41,
+  "fields": {
+    "action_time": "2026-02-01T08:50:03.575Z",
+    "user": [
+      "Vyga"
+    ],
+    "content_type": [
+      "billing",
+      "invoice"
+    ],
+    "object_id": "33",
+    "object_repr": "MEV26-008 – Band",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 42,
+  "fields": {
+    "action_time": "2026-02-01T08:50:11.699Z",
+    "user": [
+      "Vyga"
+    ],
+    "content_type": [
+      "billing",
+      "worklog"
+    ],
+    "object_id": "10",
+    "object_repr": "Band – 2026-01-21 – band",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u012etraukta \\u012f s\\u0105skait\\u0105\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 43,
+  "fields": {
+    "action_time": "2026-02-01T08:52:37.600Z",
+    "user": [
+      "Vyga"
+    ],
+    "content_type": [
+      "billing",
+      "worklog"
+    ],
+    "object_id": "10",
+    "object_repr": "Band – 2026-01-21 – band",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 44,
+  "fields": {
+    "action_time": "2026-02-01T08:52:48.126Z",
+    "user": [
+      "Vyga"
+    ],
+    "content_type": [
+      "billing",
+      "invoice"
+    ],
+    "object_id": "34",
+    "object_repr": "MEV26-008 – Band",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 45,
+  "fields": {
+    "action_time": "2026-02-02T06:01:47.802Z",
+    "user": [
+      "Vyga"
+    ],
+    "content_type": [
+      "billing",
+      "subscription"
+    ],
+    "object_id": "25",
+    "object_repr": "Band: Mokestis per metus",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 46,
+  "fields": {
+    "action_time": "2026-02-02T06:02:23.358Z",
+    "user": [
+      "Vyga"
+    ],
+    "content_type": [
+      "billing",
+      "subscription"
+    ],
+    "object_id": "26",
+    "object_repr": "Band: Bandymas",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 47,
+  "fields": {
+    "action_time": "2026-02-03T14:01:28.232Z",
+    "user": [
+      "Vyga"
+    ],
+    "content_type": [
+      "billing",
+      "invoice"
+    ],
+    "object_id": "35",
+    "object_repr": "MEV26-008 – Band",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 48,
+  "fields": {
+    "action_time": "2026-02-03T14:02:00.586Z",
+    "user": [
+      "Vyga"
+    ],
+    "content_type": [
+      "billing",
+      "subscription"
+    ],
+    "object_id": "26",
+    "object_repr": "Band: Bandymas",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 49,
+  "fields": {
+    "action_time": "2026-02-03T14:07:21.044Z",
+    "user": [
+      "Vyga"
+    ],
+    "content_type": [
+      "billing",
+      "subscription"
+    ],
+    "object_id": "27",
+    "object_repr": "Band: Bandymas",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 50,
+  "fields": {
+    "action_time": "2026-02-04T11:22:27.745Z",
+    "user": [
+      "Vyga"
+    ],
+    "content_type": [
+      "billing",
+      "worklog"
+    ],
+    "object_id": "11",
+    "object_repr": "Globos ir slaugos centras \"Sidabražolė\" VšĮ – 2026-02-04 – Perfect SSL sidbražolė.lt iki 2027-03-04",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 51,
+  "fields": {
+    "action_time": "2026-02-04T11:23:16.191Z",
+    "user": [
+      "Vyga"
+    ],
+    "content_type": [
+      "billing",
+      "worklog"
+    ],
+    "object_id": "12",
+    "object_repr": "PALIATYVIOS MEDICINOS KLINIKA UAB – 2026-02-04 – Perfect SSL paliatyviojislauga.lt iki 2027-03-04",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 52,
+  "fields": {
+    "action_time": "2026-02-04T11:23:26.509Z",
+    "user": [
+      "Vyga"
+    ],
+    "content_type": [
+      "billing",
+      "worklog"
+    ],
+    "object_id": "12",
+    "object_repr": "PALIATYVIOS MEDICINOS KLINIKA UAB – 2026-02-04 – Perfect SSL paliatyviojislauga.lt iki 2027-03-04",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Kaina u\\u017e vienet\\u0105 (\\u20ac)\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 53,
+  "fields": {
+    "action_time": "2026-02-17T06:11:51.746Z",
+    "user": [
+      "Vyga"
+    ],
+    "content_type": [
+      "billing",
+      "invoice"
+    ],
+    "object_id": "36",
+    "object_repr": "MEV26-008 – Band",
+    "action_flag": 3,
+    "change_message": ""
+  }
+}
+]

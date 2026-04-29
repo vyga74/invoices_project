@@ -84,6 +84,11 @@ class Command(BaseCommand):
     def send_invoice_email(self, invoice: Invoice) -> None:
         client = invoice.client
 
+        # --- TEST REŽIMAS ---
+        SEND_ONLY_TO_ADMIN = True
+        ADMIN_EMAIL = getattr(settings, "ADMIN_INVOICE_EMAIL", "vyga@infsis.lt")
+        # --------------------
+
         recipients = []
 
         # 1) Paimam papildomus klientų el. paštus (ClientEmail)
@@ -102,6 +107,15 @@ class Command(BaseCommand):
             main_email = getattr(client, "email", "")
             if main_email:
                 recipients = [main_email]
+
+        if SEND_ONLY_TO_ADMIN:
+            original_recipients = recipients.copy()
+            recipients = [ADMIN_EMAIL]
+            self.stdout.write(
+                self.style.WARNING(
+                    f"TEST režimas: klientui {client.name} laiškas nesiunčiamas. Vietoje to siunčiama tik į {ADMIN_EMAIL}. Originalūs gavėjai: {', '.join(original_recipients) if original_recipients else 'nėra'}"
+                )
+            )
 
         if not recipients:
             self.stdout.write(self.style.WARNING(f"⚠️ Klientas {client.name} neturi el. pašto – nesiunčiu."))
